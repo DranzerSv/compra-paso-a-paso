@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2</title>
+    <style>
+      body {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30.46px;
+        text-align: center;
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 610px;
+        box-shadow: 0px 0px 16px 0px #051c2c14;
+
+        box-shadow: 0px 2px 2px 0px #051c2c0a;
+      }
+      .step_buttons {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 16px;
+        width: 240px;
+        padding-left: 4px;
+        padding-right: 4px;
+        height: 44px;
+        border: #e6e6e6 solid 1px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      .step_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        transition-duration: 0.3s;
+        background-color: #ffffff;
+        width: 36.45px;
+        height: 35.52px;
+        align-items: center;
+        border-radius: 32.87px 32.87px 32.87px 32.87px;
+        opacity: 0px;
+        border: 1px solid #e6e6e6;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15.9px;
+        line-height: 20.18px;
+        letter-spacing: 0.0025em;
+        text-align: left;
+        font-weight: bold;
+        color: #a83338;
+      }
+
+      .selected {
+        color: white;
+        width: 85px;
+        height: 35.52px;
+
+        gap: 4.24px;
+        border-radius: 26.51px 26.51px 26.51px 26.51px;
+        opacity: 0px;
+        font-size: 15.9px;
+
+        background-color: #a83338;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        line-height: 25.38px;
+        letter-spacing: 0.15%;
+        font-weight: 475px;
+      }
+
+      .instruction {
+        display: none;
+        width: Fill (323.5px) px;
+        height: Hug (169.09px) px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .show-instruction {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .instruction_title {
+        color: #a83338;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 475px;
+        line-height: 25.38px;
+        letter-spacing: 0.0015em;
+        text-align: left;
+        margin-bottom: 0px;
+      }
+      .instruction_text {
+        color: #6d6e71;
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: 0.0025em;
+        text-align: left;
+        margin: 0px;
+      }
+
+      ul {
+        color: #6d6e71;
+      }
+      ul li {
+        padding-left: 10px;
+      }
+
+      .img_mobile {
+        margin: auto;
+        width: 323px;
+      }
+      .img_desktop {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        .img_mobile {
+          display: none;
+          margin: auto;
+          margin-top: 25px;
+          width: 323px;
+        }
+        .img_desktop {
+          display: block;
+          margin: auto;
+          margin-top: 25px;
+          width: 610px;
+        }
+        .steps {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          max-width: 610px;
+
+          box-shadow: none;
+        }
+        .step_buttons {
+          gap: 16px;
+          width: 366px;
+          padding-left: 4px;
+          padding-right: 4px;
+          height: 83px;
+          border: #e6e6e6 solid 2px;
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+        .step_button {
+          width: 68px;
+          height: 67px;
+          border-radius: 36px;
+        }
+        .selected {
+          color: white;
+          width: 98px;
+          height: 67px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Compra en 4 simples pasos</h1>
+    <div class="steps">
+      <div class="step_buttons">
+        <button class="step_button selected">Paso 1</button>
+        <button class="step_button">2</button>
+        <button class="step_button">3</button>
+        <button class="step_button">4</button>
+      </div>
+
+      <div class="instruction show-instruction" id="Instruction 1">
+        <h3 class="instruction_title">Elige tus productos</h3>
+        <p class="instruction_text">
+          Navega por nuestro sitio web para encontrar los productos que deseas.
+          Puedes buscar por categoría, marca o nombre.
+        </p>
+        <p class="instruction_text">
+          Clickea en comprar o agrégalos al carrito.
+        </p>
+        <img src="src/PASO-1-MOB.gif" class="img_mobile" />
+        <img src="src/PASO-1-DESK.gif" class="img_desktop" />
+      </div>
+      <div class="instruction" id="Instruction 2">
+        <h3 class="instruction_title">Inicia sesión o regístrate</h3>
+        <p class="instruction_text">
+          Si ya tienes una cuenta, inicia sesión para continuar con el proceso
+          de compra. Si no tienes una cuenta, puedes registrarte en el momento.
+        </p>
+        <img src="src/PASO-2-MOB.gif" class="img_mobile" />
+        <img src="src/PASO-2-DESK.gif" class="img_desktop" />
+      </div>
+      <div class="instruction" id="Instruction 3">
+        <h3 class="instruction_title">Elige el método de entrega</h3>
+        <p class="instruction_text">
+          Elige el método de entrega que prefieras:
+          <strong>retiro en tienda o envío a domicilio.</strong>
+        </p>
+
+        <ul>
+          <li>
+            <p class="instruction_text">
+              Retiro en tienda: Elige la sucursal en la que deseas recoger tu
+              pedido.
+            </p>
+          </li>
+          <li>
+            <p class="instruction_text">
+              Envío a domicilio: Ingresa tu dirección de entrega.
+            </p>
+          </li>
+        </ul>
+        <img src="src/PASO-3-MOB.gif" class="img_mobile" />
+        <img src="src/PASO-3-DESK.gif" class="img_desktop" />
+      </div>
+      <div class="instruction" id="Instruction 4">
+        <h3 class="instruction_title">Elige la forma de pago</h3>
+        <p class="instruction_text">
+          Elige la forma de pago que prefieras. Las formas de pago más comunes
+          son tarjetas de crédito, tarjetas de débito o con tus tarjetas
+          credisiman.
+        </p>
+        <p class="instruction_text">Y listo, ¡compra realizada!</p>
+        <img src="src/PASO-4-MOB.gif" class="img_mobile" />
+        <img src="src/PASO-4-DESK.gif" class="img_desktop" />
+      </div>
+    </div>
+  </body>
+  <script>
+    const step_buttons = document.querySelectorAll(".step_button");
+    const step_instructions = document.querySelectorAll(".instruction");
+
+    const restorePreviousButtons = () => {
+      const previouslySelectedButton = document.querySelector(".selected");
+      const buttonText = previouslySelectedButton.textContent;
+      const lastCharacter = buttonText.charAt(buttonText.length - 1);
+      previouslySelectedButton.textContent = lastCharacter;
+    };
+
+    const removeClassFromUnselected = () => {
+      step_buttons.forEach(function (boton) {
+        boton.classList.remove("selected");
+      });
+    };
+
+    const addWordToButton = (button, word) => {
+      const wordOnButton = button.textContent;
+
+      if (!wordOnButton.includes(word)) {
+        button.textContent = word + " " + wordOnButton;
+      }
+    };
+    const hideAllInstructions = () => {
+      step_instructions.forEach((step_instruction) => {
+        step_instruction.classList.remove("show-instruction");
+      });
+    };
+    const showInstruction = (element) => {
+      const lastCharacter = element.textContent.charAt(
+        element.textContent.length - 1
+      );
+
+      const instruction = document.getElementById(
+        "Instruction " + lastCharacter
+      );
+      hideAllInstructions();
+
+      instruction.classList.toggle("show-instruction");
+    };
+
+    step_buttons.forEach((step_button) => {
+      step_button.addEventListener("click", function () {
+        restorePreviousButtons();
+        showInstruction(this);
+
+        removeClassFromUnselected();
+
+        this.classList.toggle("selected");
+        //retraso necesario para evitar un bug visual
+        setTimeout(() => {
+          addWordToButton(this, "Paso");
+        }, 300);
+      });
+    });
+  </script>
+</html>
